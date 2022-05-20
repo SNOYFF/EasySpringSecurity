@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="open.example.easyspringsecurity.dao.MenuDao">
+    <select id="getAllMenuList" resultType="open.example.easyspringsecurity.domain.vo.MenuListVo">
+        select m.url,mr.rid,r.name from menu m
+        left join  menu_role mr on m.id=mr.mid
+        left join  role r on r.id = mr.rid
+    </select>
+
+</mapper>

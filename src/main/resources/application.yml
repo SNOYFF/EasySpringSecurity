@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql:///dev?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+
+  redis:
+    port: 6379
+
+mybatis-plus:
+  mapperPackage: open.**.**.dao
+  # 对应的 XML 文件位置
+  mapperLocations: classpath*:mapper/**/*Mapper.xml
+

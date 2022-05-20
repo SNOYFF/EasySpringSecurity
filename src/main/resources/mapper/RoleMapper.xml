@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="open.example.easyspringsecurity.dao.RoleDao">
+    <select id="selectRoleList" resultType="java.lang.String">
+select r.name from user u
+left join user_role ur on u.id = ur.uid
+left join role r on ur.rid = r.id
+where u.id =#{userId}
+    </select>
+</mapper>
